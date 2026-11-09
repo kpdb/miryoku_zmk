@@ -1,14 +1,14 @@
 # Copyright 2024 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: 'Build Example Temper nice_nano_v2'
+name: 'Build Example Temper nice_nano'
 on: workflow_dispatch
 jobs:
   build:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      board: '["nice_nano_v2"]'
+      board: '["nice_nano//zmk"]'
       shield: '["temper_left nice_view_adapter nice_view_custom","temper_right nice_view_adapter nice_view_custom"]'
       modules: '["dsifry/nice-view-mod/main"]'
       custom_config: '["#define MIRYOKU_EXTRA_QWERTY"]'
